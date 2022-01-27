@@ -18,28 +18,37 @@ namespace unit_Tests
         // properties
         public bool Pass
         {
-            get { return pass; }
 
+            get { return pass; }
             set { pass = value; }
+
         }
 
         public string TestMessage
         {
-            get { return testMessage; }
 
+            get { return testMessage; }
             set { testMessage = value; }
+
         }
 
 
         //test Functions
 
-        public bool IsHeads(){
+        public void IsHeads(){
+
             if (Program.FlipCoin() == "heads")
             {
-                return true;
-            }                                        
+                testMessage = "It was heads!";
+                pass = true;
+            }
+            else
+            {
+                testMessage = "it was tails!";
+                pass = false;
+            }
+            
 
-            return false;
         }
     
 

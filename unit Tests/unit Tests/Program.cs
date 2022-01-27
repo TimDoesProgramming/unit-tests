@@ -10,10 +10,10 @@ namespace unit_Tests
     {
         static void Main(string[] args)
         {
+            TestRunner testRun = new TestRunner();
 
-
-
-
+            testRun.RunTests();
+            Console.ReadLine();
         }
 
         public static string FlipCoin()
